@@ -26,9 +26,15 @@ public class ScoreManager : MonoBehaviour
   
     void Update()
     {
+        if(scoreIncreasing){
 
+             scoreCount += pointPerSecond * Time.deltaTime;
 
-       scoreCount += pointPerSecond * Time.deltaTime;
+        }
+        if(scoreCount > hiScoreCount){
+            hiScoreCount = scoreCount;
+        }
+
 
         scoreText.text = "Score: " + Mathf.Round (scoreCount);  
         hiScoreText.text= "High Score: " + hiScoreCount;

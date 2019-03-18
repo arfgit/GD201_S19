@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour{
      private int numJump; //how many jumps does the player get
     public int numJumpValue; //Set the value for the jumps
 
+    public bool pressed;
+
       void Start(){
         rb = GetComponent<Rigidbody2D>();
 
@@ -32,9 +34,9 @@ public class PlayerController : MonoBehaviour{
 
 
 
-        moveInput = Input.GetAxisRaw("Horizontal");
+      /*   moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
-
+        */
   /*  if(facingRight == false && moveInput > 0){
 
         Flip();
@@ -76,6 +78,25 @@ public class PlayerController : MonoBehaviour{
 
         } */
 
+      /*    if(Input.GetKeyDown (KeyCode.Space)){
+              if(!pressed){
+           GetComponent<SpriteRenderer>().color = new 
+            Color (42, 148, 209, 255f);
+            pressed = true;
+              }
+        }
+        else if(Input.GetKeyUp (KeyCode.Space)){
+
+           GetComponent<SpriteRenderer>().color = new Color (42, 148, 209, 1f);
+            pressed = false;
+
+        } 
+        PLAYER SHOULD CHANGE COLOR WHEN THE KEY IS PRESSED, BUT THEN CHANGE BACK WHEN THE KEY IS RELEASED.
+        
+        */
+        
+       
+
     }
 
     void Flip(){
@@ -86,6 +107,12 @@ transform.localScale = Scaler;
 
 
     }
+    /*   void OnTriggerEnter2D(Collider2D col){
+        if(col.gameObject.CompareTag("Bad")){
+            Destroy(col.gameObject);
 
+        }
+    }
+    */
   
 }
