@@ -21,7 +21,8 @@ public class LevelController : MonoBehaviour{
         //generate
 
         if(counter <= 0.0f){
-        GenerateFloorChallenge();
+        
+            GenerateFloorChallenge();
 
         } else
         {
@@ -32,7 +33,7 @@ public class LevelController : MonoBehaviour{
         //scroll
          GameObject currentChild;
         
-        for(int i = 0; i< transform.childCount; i++){
+        for(int i = 0; i < transform.childCount; i++){
 
             currentChild = transform.GetChild(i).gameObject;
             ScrollChallenge(currentChild);

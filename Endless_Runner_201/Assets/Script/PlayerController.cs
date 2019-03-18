@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour{
 
         }
 
-        if(Input.GetKeyDown(KeyCode.W) && numJump > 0){
+      if(Input.GetKeyDown(KeyCode.W) && numJump > 0){
             rb.velocity = Vector2.up * jumpForce;
             numJump--;
 
@@ -63,7 +63,18 @@ public class PlayerController : MonoBehaviour{
         if(Input.GetKeyDown(KeyCode.W) && numJump == 0 && isGrounded == true){
             rb.velocity = Vector2.up * jumpForce;
 
-        }
+        } 
+        rb.velocity = new Vector2(speed, rb.velocity.y);
+
+       /*  if(Input.GetKeyDown(KeyCode.W)){
+
+            rb.velocity = new Vector2 (rb.velocity.x, jumpForce);
+
+
+
+
+
+        } */
 
     }
 

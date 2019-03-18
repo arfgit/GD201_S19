@@ -1,0 +1,38 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class ScoreManager : MonoBehaviour
+{
+
+    public Text scoreText;
+    public Text hiScoreText;
+
+    public float scoreCount;
+    public float hiScoreCount;
+
+    public float pointPerSecond;
+
+    public bool scoreIncreasing;
+
+  
+    void Start()
+    {
+        
+
+    }
+
+  
+    void Update()
+    {
+
+
+       scoreCount += pointPerSecond * Time.deltaTime;
+
+        scoreText.text = "Score: " + Mathf.Round (scoreCount);  
+        hiScoreText.text= "High Score: " + hiScoreCount;
+
+
+    }
+}
