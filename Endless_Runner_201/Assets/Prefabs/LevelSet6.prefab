@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8239552524621723050}
   - component: {fileID: 8239552524621723049}
   m_Layer: 8
-  m_Name: LevelSet1
+  m_Name: LevelSet6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -384,7 +384,7 @@ GameObject:
   - component: {fileID: 8761689495155759454}
   m_Layer: 8
   m_Name: GreenWall
-  m_TagString: Untagged
+  m_TagString: Bad
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -397,8 +397,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8434892302788890357}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 17.56, y: 6.597, z: 0}
-  m_LocalScale: {x: 4.557581, y: 0.42105597, z: 1}
+  m_LocalPosition: {x: 17.56, y: 6.472, z: 0}
+  m_LocalScale: {x: 4.942242, y: 0.39958212, z: 0.949}
   m_Children: []
   m_Father: {fileID: 8239552524621723050}
   m_RootOrder: 3
@@ -441,7 +441,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ad4080a6567c3264b9f317b831a85a76, type: 3}
-  m_Color: {r: 0.019477723, g: 0.9607843, b: 0, a: 1}
+  m_Color: {r: 0.9607843, g: 0.087116756, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -484,7 +484,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8434892302788890357}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3a0014cdafcf1540b4b978ed251a571, type: 3}
   m_Name: 
@@ -503,7 +503,7 @@ GameObject:
   - component: {fileID: 4091156969477400847}
   m_Layer: 8
   m_Name: RedWall
-  m_TagString: Bad
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -560,7 +560,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ad4080a6567c3264b9f317b831a85a76, type: 3}
-  m_Color: {r: 0.9607843, g: 0.017225998, b: 0, a: 1}
+  m_Color: {r: 0.043115105, g: 0.9607843, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -603,7 +603,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8760990488007671595}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3a0014cdafcf1540b4b978ed251a571, type: 3}
   m_Name: 

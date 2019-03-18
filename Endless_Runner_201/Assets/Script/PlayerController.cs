@@ -20,9 +20,11 @@ public class PlayerController : MonoBehaviour{
 
     public bool pressed;
 
+    
+
       void Start(){
         rb = GetComponent<Rigidbody2D>();
-
+      
 
     }
 
@@ -94,7 +96,7 @@ public class PlayerController : MonoBehaviour{
         PLAYER SHOULD CHANGE COLOR WHEN THE KEY IS PRESSED, BUT THEN CHANGE BACK WHEN THE KEY IS RELEASED.
         
         */
-        
+
        
 
     }
@@ -107,12 +109,14 @@ transform.localScale = Scaler;
 
 
     }
-    /*   void OnTriggerEnter2D(Collider2D col){
+      void OnCollisionEnter2D(Collider2D col){
         if(col.gameObject.CompareTag("Bad")){
-            Destroy(col.gameObject);
+            Destroy(gameObject);
 
         }
     }
-    */
+    
+
+    
   
 }

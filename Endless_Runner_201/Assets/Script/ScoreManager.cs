@@ -36,8 +36,8 @@ public class ScoreManager : MonoBehaviour
         }
 
 
-        scoreText.text = "Score: " + Mathf.Round (scoreCount);  
-        hiScoreText.text= "High Score: " + hiScoreCount;
+        scoreText.text = "Distance: " + Mathf.Round (scoreCount);  
+        hiScoreText.text= "Best: " + Mathf.Round(hiScoreCount);
 
 
     }
