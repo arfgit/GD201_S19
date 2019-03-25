@@ -337,7 +337,7 @@ MonoBehaviour:
   speed: 8
   speedMultiplier: 0
   Milestone: 0
-  jumpForce: 12
+  jumpForce: 12.7
   groundCheck: {fileID: 1531360752}
   checkRadius: 0.5
   whatIsGround:
@@ -1316,7 +1316,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954120016}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35.3, y: -10.96, z: 1}
+  m_LocalPosition: {x: 35.3, y: -11.08, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 83147019}
@@ -1604,8 +1604,9 @@ MonoBehaviour:
   floors:
   - {fileID: 8239552524621723051, guid: 8b9cf72336a88ec40b64e06754baf840, type: 3}
   - {fileID: 8239552524621723051, guid: b588a4083986e35418421d15c2566ce9, type: 3}
-  - {fileID: 0}
-  frequency: 0.2
+  - {fileID: 8239552524621723051, guid: ab71c661463da354bbb1e107c8c3786d, type: 3}
+  - {fileID: 8239552524621723051, guid: abbb23b4f36e11d4db602dc5e029d7a3, type: 3}
+  frequency: 0.1
   challengesSpawnPoint: {fileID: 954120017}
 --- !u!1 &1184348807
 GameObject:
@@ -2564,7 +2565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thePlatform: {fileID: 777628647}
   generationPoint: {fileID: 1407183945}
-  distanceBetween: 2.5
+  distanceBetween: 2.3
 --- !u!4 &2063789070
 Transform:
   m_ObjectHideFlags: 0
