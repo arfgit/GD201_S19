@@ -26,10 +26,10 @@ public class PhaseController : MonoBehaviour
         }
 
     }
-    /* void OnTriggerEnter2D(Collider2D.col){
+   /*   void OnTriggerEnter2D(Collider2D col){
         if(col.gameObject.tag == "Bad"){
-            Destroy (CollabProxy.gameObject);
+            Destroy (gameObject);
 
-        }
+        } 
     } */
 }

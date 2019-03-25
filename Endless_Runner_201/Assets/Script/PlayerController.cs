@@ -5,7 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour{  
      public float speed; //controls the characters movement speed
+
+     public float speedMultiplier;
+
+     public float Milestone;
+     private float speedMilestoneCount;
      public float jumpForce; //controls the characters jump
+     //public float gravity; //grav
+
      private float moveInput; //key movement 
      private Rigidbody2D rb; //rigidbody
 
@@ -22,10 +29,17 @@ public class PlayerController : MonoBehaviour{
     public bool pressed;
     public Vector3 respawnPoint;
 
+ public float gravity = 9.81f;
+   public ForceMode2D forceMode;
+  
+
+    
+
     
 
       void Start(){
         rb = GetComponent<Rigidbody2D>();
+     
       
 
     }
@@ -36,7 +50,7 @@ public class PlayerController : MonoBehaviour{
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
 
-
+      rb.AddForce(Vector2.down * gravity, forceMode); 
 
       /*   moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
@@ -54,23 +68,42 @@ public class PlayerController : MonoBehaviour{
 
     void Update(){
 
+
+    //  if(transform.position.x > speedMilestoneCount){
+      //  speedMilestoneCount += Milestone;
+        
+       // speed = speed * speedMultiplier;
+
+
+
+
+      
+
         if(isGrounded == true){
             numJump = numJumpValue;
 
         }
-
+  
+        
       if(Input.GetKeyDown(KeyCode.W) && numJump > 0){
-            rb.velocity = Vector2.up * jumpForce;
+            rb.velocity = Vector2.up * (jumpForce - 1) * Time.deltaTime;
             numJump--;
 
 
         }
 
-        if(Input.GetKeyDown(KeyCode.W) && numJump == 0 && isGrounded == true){
+       if(Input.GetKeyDown(KeyCode.W) && numJump == 0 && isGrounded == true){
             rb.velocity = Vector2.up * jumpForce;
 
-        } 
+        }  
         rb.velocity = new Vector2(speed, rb.velocity.y);
+
+       
+
+
+
+
+
 
        /*  if(Input.GetKeyDown(KeyCode.W)){
 
@@ -98,7 +131,7 @@ public class PlayerController : MonoBehaviour{
         PLAYER SHOULD CHANGE COLOR WHEN THE KEY IS PRESSED, BUT THEN CHANGE BACK WHEN THE KEY IS RELEASED.
         
         */
-
+    
        
 
     }
@@ -111,12 +144,14 @@ transform.localScale = Scaler;
 
 
     }
-      void OnCollisionEnter2D(Collider2D col){
-        if(col.gameObject.CompareTag("Bad")){
-            Destroy(gameObject);
-
-        }
+    void OnCollisionEnter2D (Collision2D col){
+    if (col.gameObject.tag == "Bad") {
+        this.gameObject.SetActive(false);
+        SceneManager.LoadScene("Game Over Screen");
+      
     }
+}
+  
 
     void OnTriggerEnter2D(Collider2D other){
       if (other.tag == "FallDetector"){
@@ -125,18 +160,17 @@ transform.localScale = Scaler;
 
 
       }
+    /*  if(other.gameObject.CompareTag("Bad")){
+        this.gameObject.SetActive(false);
+
+
+
+      } */
 
 
 
     }
 
-    public void GameOver(){
-
-      //if(gameObject = Destroy){
-
-	//	SceneManager.LoadScene("Game Over Screen");
-    //  }
-	}
     
   
     
