@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,18 +10,19 @@ public class GameManager : MonoBehaviour
 
         public PlayerController thePlayer;
         private Vector3 playerStarterPoint;
+
+ 
   
     void Start()
     {
-        platformStartPoint = platformGenerator.position;
-        playerStarterPoint = thePlayer.transform.position;
+  
 
     }
 
    
     void Update()
     {
-        
+  
     }
 
 
@@ -31,15 +33,5 @@ public class GameManager : MonoBehaviour
 
     }
 
-    /*  public IEnumerator RestartGameCo()
-    {
-
-        thePlayer.transform.position = playerStarterPoint;
-
-
-
-
-
-    }
-    */
+   
 }

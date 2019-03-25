@@ -16,10 +16,16 @@ public class ScoreManager : MonoBehaviour
 
     public bool scoreIncreasing;
 
+    private ScoreManager theScoreManager;
+
   
     void Start()
     {
-        
+        if(PlayerPrefs.GetFloat("Best") != null){
+
+            hiScoreCount = PlayerPrefs.GetFloat("Best");
+
+        }
 
     }
 
@@ -33,11 +39,26 @@ public class ScoreManager : MonoBehaviour
         }
         if(scoreCount > hiScoreCount){
             hiScoreCount = scoreCount;
+            PlayerPrefs.SetFloat("Best", hiScoreCount);
         }
 
 
         scoreText.text = "Distance: " + Mathf.Round (scoreCount);  
         hiScoreText.text= "Best: " + Mathf.Round(hiScoreCount);
+
+
+    }
+     void OnTriggerEnter2D(Collider2D other){
+
+      if(other.tag == "FallDetector"){
+       scoreCount = 0;
+       scoreIncreasing = true;
+        }else{
+            scoreIncreasing = false;
+
+
+        }
+
 
 
     }

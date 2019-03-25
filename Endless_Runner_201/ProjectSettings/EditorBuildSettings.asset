@@ -11,4 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndlessRun.unity
     guid: e539570c98171474b9aa8a0f29ee04b1
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scenes/Start Screen.unity
+    guid: 9139cc4dfa80a6a4386e5957911833ba
+  - enabled: 1
+    path: Assets/Scenes/Game Over Screen.unity
+    guid: aca23ae5a11685f40b861c6b670da41c

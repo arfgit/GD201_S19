@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour{  
      public float speed; //controls the characters movement speed
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour{
     public int numJumpValue; //Set the value for the jumps
 
     public bool pressed;
+    public Vector3 respawnPoint;
 
     
 
@@ -115,8 +117,28 @@ transform.localScale = Scaler;
 
         }
     }
-    
 
+    void OnTriggerEnter2D(Collider2D other){
+      if (other.tag == "FallDetector"){
+        SceneManager.LoadScene("Game Over Screen");
+
+
+
+      }
+
+
+
+    }
+
+    public void GameOver(){
+
+      //if(gameObject = Destroy){
+
+	//	SceneManager.LoadScene("Game Over Screen");
+    //  }
+	}
+    
+  
     
   
 }

@@ -7,6 +7,8 @@ TagManager:
   - diffuse
   - specular
   - Bad
+  - FallDetector
+  - CheckPoint
   layers:
   - Default
   - TransparentFX
