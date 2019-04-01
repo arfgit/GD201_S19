@@ -346,7 +346,7 @@ MonoBehaviour:
   numJumpValue: 0
   pressed: 0
   respawnPoint: {x: 0, y: 0, z: 0}
-  gravity: 10.2
+  gravity: 12
   forceMode: 0
 --- !u!114 &45698102
 MonoBehaviour:
