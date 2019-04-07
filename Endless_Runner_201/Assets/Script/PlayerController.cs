@@ -147,7 +147,7 @@ transform.localScale = Scaler;
     void OnCollisionEnter2D (Collision2D col){
     if (col.gameObject.tag == "Bad") {
         this.gameObject.SetActive(false);
-        SceneManager.LoadScene("Game Over Screen");
+       // SceneManager.LoadScene("Game Over Screen");
       
     }
 }
