@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour{
     public bool pressed;
     public Vector3 respawnPoint;
 
- public float gravity = 9.81f;
+    public float gravity = 9.81f;
    public ForceMode2D forceMode;
   
 
@@ -66,84 +66,94 @@ public class PlayerController : MonoBehaviour{
 
     }
 
-    void Update(){
+    void Update()
+    {
 
 
-    //  if(transform.position.x > speedMilestoneCount){
-      //  speedMilestoneCount += Milestone;
-        
-       // speed = speed * speedMultiplier;
+        //  if(transform.position.x > speedMilestoneCount){
+        //  speedMilestoneCount += Milestone;
+
+        // speed = speed * speedMultiplier;
 
 
 
 
-      
 
-        if(isGrounded == true){
+
+        if (isGrounded == true)
+        {
             numJump = numJumpValue;
 
         }
-  
-        
-      if(Input.GetKeyDown(KeyCode.W) && numJump > 0){
+
+
+        if (Input.GetKeyDown(KeyCode.W) && numJump > 0)
+        {
             rb.velocity = Vector2.up * (jumpForce - 1) * Time.deltaTime;
             numJump--;
 
 
         }
 
-       if(Input.GetKeyDown(KeyCode.W) && numJump == 0 && isGrounded == true){
+        if (Input.GetKeyDown(KeyCode.W) && numJump == 0 && isGrounded == true)
+        {
             rb.velocity = Vector2.up * jumpForce;
 
-        }  
+        }
         rb.velocity = new Vector2(speed, rb.velocity.y);
 
-       
 
 
 
 
 
 
-       /*  if(Input.GetKeyDown(KeyCode.W)){
 
-            rb.velocity = new Vector2 (rb.velocity.x, jumpForce);
+        /*  if(Input.GetKeyDown(KeyCode.W)){
 
-
-
+             rb.velocity = new Vector2 (rb.velocity.x, jumpForce);
 
 
-        } */
 
-      /*    if(Input.GetKeyDown (KeyCode.Space)){
-              if(!pressed){
-           GetComponent<SpriteRenderer>().color = new 
-            Color (42, 148, 209, 255f);
-            pressed = true;
-              }
+
+
+         } */
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+         
+
+                GetComponent<SpriteRenderer>().color = new
+                 Color(42f/255, 148f/255, 209f/255, .5f);
+                
+            
+
         }
-        else if(Input.GetKeyUp (KeyCode.Space)){
+        else 
+        {
 
-           GetComponent<SpriteRenderer>().color = new Color (42, 148, 209, 1f);
-            pressed = false;
+            GetComponent<SpriteRenderer>().color = new Color( 42f/255, 148f / 255, 209f / 255, 1f);
 
-        } 
-        PLAYER SHOULD CHANGE COLOR WHEN THE KEY IS PRESSED, BUT THEN CHANGE BACK WHEN THE KEY IS RELEASED.
+
+        }
+    }
+        //PLAYER SHOULD CHANGE COLOR WHEN THE KEY IS PRESSED, BUT THEN CHANGE BACK WHEN THE KEY IS RELEASED.
         
-        */
+      
     
        
 
-    }
+    
 
-    void Flip(){
+   /* void Flip(){
 facingRight = !facingRight;
 Vector3 Scaler = transform.localScale;
 Scaler.x *= -1;
 transform.localScale = Scaler;
 
 
-    }
+    } */
+
     void OnCollisionEnter2D (Collision2D col){
     if (col.gameObject.tag == "Bad") {
         this.gameObject.SetActive(false);

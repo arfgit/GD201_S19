@@ -315,7 +315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 45698096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.88, y: -10.1, z: 0}
+  m_LocalPosition: {x: -13.87, y: -10.1, z: 0}
   m_LocalScale: {x: 1.1926, y: 1.1124, z: 1}
   m_Children:
   - {fileID: 1531360752}
@@ -337,7 +337,7 @@ MonoBehaviour:
   speed: 8
   speedMultiplier: 0
   Milestone: 0
-  jumpForce: 12.7
+  jumpForce: 14.02
   groundCheck: {fileID: 1531360752}
   checkRadius: 0.5
   whatIsGround:
@@ -346,7 +346,7 @@ MonoBehaviour:
   numJumpValue: 0
   pressed: 0
   respawnPoint: {x: 0, y: 0, z: 0}
-  gravity: 9
+  gravity: 12
   forceMode: 0
 --- !u!114 &45698102
 MonoBehaviour:
@@ -1260,7 +1260,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 941614774}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.56, y: -6.36, z: 1}
+  m_LocalPosition: {x: -7.83, y: -6.36, z: 1}
   m_LocalScale: {x: 1.9000002, y: 1.1750002, z: 1}
   m_Children: []
   m_Father: {fileID: 83147019}
@@ -1600,7 +1600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390bd1d4f0d905c48a1619c4b225341d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 4.5
+  scrollSpeed: 3.5
   floors:
   - {fileID: 8239552524621723051, guid: 8b9cf72336a88ec40b64e06754baf840, type: 3}
   - {fileID: 8239552524621723051, guid: b588a4083986e35418421d15c2566ce9, type: 3}
