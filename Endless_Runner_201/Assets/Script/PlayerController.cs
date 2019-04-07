@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour{
 
     public float gravity = 9.81f;
    public ForceMode2D forceMode;
+
   
 
     
@@ -74,8 +75,6 @@ public class PlayerController : MonoBehaviour{
         //  speedMilestoneCount += Milestone;
 
         // speed = speed * speedMultiplier;
-
-
 
 
 
@@ -127,6 +126,7 @@ public class PlayerController : MonoBehaviour{
                  Color(42f/255, 148f/255, 209f/255, .5f);
                 
             
+        
 
         }
         else 
@@ -134,7 +134,7 @@ public class PlayerController : MonoBehaviour{
 
             GetComponent<SpriteRenderer>().color = new Color( 42f/255, 148f / 255, 209f / 255, 1f);
 
-
+    
         }
     }
         //PLAYER SHOULD CHANGE COLOR WHEN THE KEY IS PRESSED, BUT THEN CHANGE BACK WHEN THE KEY IS RELEASED.
@@ -157,7 +157,7 @@ transform.localScale = Scaler;
     void OnCollisionEnter2D (Collision2D col){
     if (col.gameObject.tag == "Bad") {
         this.gameObject.SetActive(false);
-       // SceneManager.LoadScene("Game Over Screen");
+        SceneManager.LoadScene("Game Over Screen");
       
     }
 }
