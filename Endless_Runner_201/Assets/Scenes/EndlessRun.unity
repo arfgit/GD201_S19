@@ -1485,7 +1485,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954120016}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35.3, y: -11.08, z: 1}
+  m_LocalPosition: {x: 25.3, y: -11.84, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 83147019}
@@ -1751,7 +1751,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1172364667}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.5, y: -6.8, z: 0}
+  m_LocalPosition: {x: 9.5, y: -7.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1769,13 +1769,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390bd1d4f0d905c48a1619c4b225341d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 3.5
+  scrollSpeed: 6
   floors:
   - {fileID: 8239552524621723051, guid: 8b9cf72336a88ec40b64e06754baf840, type: 3}
   - {fileID: 8239552524621723051, guid: b588a4083986e35418421d15c2566ce9, type: 3}
   - {fileID: 8239552524621723051, guid: ab71c661463da354bbb1e107c8c3786d, type: 3}
   - {fileID: 8239552524621723051, guid: abbb23b4f36e11d4db602dc5e029d7a3, type: 3}
-  frequency: 0.1
+  frequency: 0.3
   challengesSpawnPoint: {fileID: 954120017}
 --- !u!1 &1184348807
 GameObject:
