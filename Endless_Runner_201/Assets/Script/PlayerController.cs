@@ -157,7 +157,7 @@ transform.localScale = Scaler;
     void OnCollisionEnter2D (Collision2D col){
     if (col.gameObject.tag == "Bad") {
         this.gameObject.SetActive(false);
-        SceneManager.LoadScene("Game Over Screen");
+      //  SceneManager.LoadScene("Game Over Screen");
       
     }
 }
@@ -165,7 +165,7 @@ transform.localScale = Scaler;
 
     void OnTriggerEnter2D(Collider2D other){
       if (other.tag == "FallDetector"){
-        SceneManager.LoadScene("Game Over Screen");
+       // SceneManager.LoadScene("Game Over Screen");
 
 
 
