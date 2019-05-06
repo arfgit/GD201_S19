@@ -15,14 +15,22 @@ public class PhaseController : MonoBehaviour
     void Update()
     {
         
-        if(Input.GetKeyDown (KeyCode.Space)){
+        if (Input.GetKey(KeyCode.Space))
+        {
+         
 
-            GetComponent<BoxCollider2D> ().isTrigger = true;
-          
+             GetComponent<BoxCollider2D> ().isTrigger = true;
+                
+            
+        
+
         }
-          else if(Input.GetKeyUp (KeyCode.Space)){
+        else 
+        {
 
-            GetComponent<BoxCollider2D> ().isTrigger = false;
+           GetComponent<BoxCollider2D> ().isTrigger = false;
+
+    
         }
 
     }
@@ -33,3 +41,4 @@ public class PhaseController : MonoBehaviour
         } 
     } */
 }
+
