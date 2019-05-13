@@ -9,6 +9,7 @@ TagManager:
   - Bad
   - FallDetector
   - CheckPoint
+  - Start
   layers:
   - Default
   - TransparentFX

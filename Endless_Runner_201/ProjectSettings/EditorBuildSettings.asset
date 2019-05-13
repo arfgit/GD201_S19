@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Start Screen.unity
     guid: 9139cc4dfa80a6a4386e5957911833ba
   - enabled: 1
+    path: Assets/Scenes/Tut.unity
+    guid: f2708e48f1983644fa2269c53202f729
+  - enabled: 1
     path: Assets/Scenes/EndlessRun.unity
     guid: e539570c98171474b9aa8a0f29ee04b1
   - enabled: 1

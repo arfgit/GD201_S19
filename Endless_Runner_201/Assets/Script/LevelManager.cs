@@ -14,4 +14,9 @@ public class LevelManager : MonoBehaviour {
     {
         Application.Quit();
     }
+
+      public void Tut()
+    {
+        SceneManager.LoadScene("Tut");
+    }
 }
