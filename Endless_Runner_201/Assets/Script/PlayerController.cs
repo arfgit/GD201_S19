@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour{
 
      public float speedMultiplier;
 
-     public float Milestone;
+     public float speedIncreaseMilestone;
      private float speedMilestoneCount;
      public float jumpForce; //controls the characters jump
      //public float gravity; //grav
@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour{
     public float gravity = 9.81f;
    public ForceMode2D forceMode;
 
+    
   
 
     
@@ -40,7 +41,6 @@ public class PlayerController : MonoBehaviour{
 
       void Start(){
         rb = GetComponent<Rigidbody2D>();
-     
       
 
     }
@@ -71,12 +71,12 @@ public class PlayerController : MonoBehaviour{
     {
 
 
-        //  if(transform.position.x > speedMilestoneCount){
-        //  speedMilestoneCount += Milestone;
+          if(transform.position.x > speedMilestoneCount){
+            speedMilestoneCount += speedIncreaseMilestone;
+            speedIncreaseMilestone += speedIncreaseMilestone * speedMultiplier;
+            speed = speed * speedMultiplier;
 
-        // speed = speed * speedMultiplier;
-
-
+          }
 
 
         if (isGrounded == true)

@@ -302,7 +302,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 821130285}
-        m_MethodName: StartGame
+        m_MethodName: Tut
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
